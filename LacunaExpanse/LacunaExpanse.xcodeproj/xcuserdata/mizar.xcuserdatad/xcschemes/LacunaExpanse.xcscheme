@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1107260486CEB800E47090"
+               BlueprintIdentifier = "78180ADE1999B0F20059112E"
                BuildableName = "LacunaExpanse.app"
                BlueprintName = "LacunaExpanse"
                ReferencedContainer = "container:LacunaExpanse.xcodeproj">
@@ -28,11 +28,21 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78180B021999B0F20059112E"
+               BuildableName = "LacunaExpanseTests.xctest"
+               BlueprintName = "LacunaExpanseTests"
+               ReferencedContainer = "container:LacunaExpanse.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
+            BlueprintIdentifier = "78180ADE1999B0F20059112E"
             BuildableName = "LacunaExpanse.app"
             BlueprintName = "LacunaExpanse"
             ReferencedContainer = "container:LacunaExpanse.xcodeproj">
@@ -51,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
+            BlueprintIdentifier = "78180ADE1999B0F20059112E"
             BuildableName = "LacunaExpanse.app"
             BlueprintName = "LacunaExpanse"
             ReferencedContainer = "container:LacunaExpanse.xcodeproj">
@@ -69,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
+            BlueprintIdentifier = "78180ADE1999B0F20059112E"
             BuildableName = "LacunaExpanse.app"
             BlueprintName = "LacunaExpanse"
             ReferencedContainer = "container:LacunaExpanse.xcodeproj">

@@ -3,7 +3,6 @@
 //  LacunaExpanse
 //
 //  Created by Michael on 11/10/11.
-//  Copyright (c) 2011 Michael. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

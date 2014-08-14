@@ -3,7 +3,6 @@
 //  LacunaExpanse
 //
 //  Created by Michael on 11/10/11.
-//  Copyright (c) 2011 Michael. All rights reserved.
 //
 
 #import "LoadData.h"
@@ -13,7 +12,7 @@ NSString * const LEdataReceivedNotification = @"LEdataReceived";
 @implementation LoadData
 
 - (void) get:(NSURL*)url {
-    NSLog(@"url = %@", url);
+    NSLog(@"Get url = %@", url);
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                         cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                        timeoutInterval:30];
@@ -24,18 +23,18 @@ NSString * const LEdataReceivedNotification = @"LEdataReceived";
 
 - (void) post:(NSURL*)url data:(NSData*)data {
 	NSMutableURLRequest*	request;
-    NSLog(@"url = %@", url);
+    NSLog(@"Post url = %@", url);
     request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
     [request setHTTPMethod:@"POST"];
 	[request setHTTPBody:data];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	[request release];
+//	[request release];
 }
 
-- (void) dealloc {
-    if (responseData) [responseData release];
-    [super dealloc];
-}
+//- (void) dealloc {
+//    if (responseData) [responseData release];
+//    [super dealloc];
+//}
 
 // NSURLConnection delegate functions //
 
@@ -49,12 +48,13 @@ NSString * const LEdataReceivedNotification = @"LEdataReceived";
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	[responseData setLength:0];
-    [connection release];
-    NSLog(@"Error");
+//    [connection release];
+    NSLog(@"URL Connection Error");
 }
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection 
 {
+    NSLog(@"URL Connection Did Finish Loading");
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc postNotificationName:LEdataReceivedNotification object:responseData];
 }
